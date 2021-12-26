@@ -1,0 +1,77 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/variables";
+
+.advices {
+	background: 
+	url(../../../../assets//advices/bg-1.png) no-repeat 0 50%,
+	url(../../../../assets//advices/bg-2.png) no-repeat 100% 75%,
+	#faf9f6;
+	padding: 58px 0;
+	&__title {
+		font-size: 44px;
+		line-height: 53px;
+		text-align: center;
+		color: #000000;
+		margin-bottom: 24px;
+	}
+	&__desc {
+		font-size: 13px;
+		line-height: 23px;
+		text-align: center;
+		color: #000000;
+		max-width: 455px;
+		margin: 0 auto 84px;
+	}
+	&-cards {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+        margin-bottom: 50px;
+	}
+	&__card {
+		max-width: 384px;
+		width: 100%;
+		background: #fff;
+        margin: 0 16px;
+        border: 1px solid #E8DCF8;
+        &-pic {
+            object-fit: cover;
+        }
+		&-info {
+			padding: 36px;
+		}
+		&-date {
+			font-size: 15px;
+			line-height: 23px;
+			color: #f7a500;
+			margin-bottom: 16px;
+		}
+		&-title {
+			font-size: 24px;
+			line-height: 32px;
+			color: #000000;
+			margin-bottom: 12px;
+		}
+		&-text {
+			font-size: 11px;
+			line-height: 23px;
+			color: #000000;
+            max-width: 280px;
+            margin-bottom: 32px;
+		}
+        &-link {
+            text-decoration: none;
+            color: $second-color;
+        }
+	}
+    &__more {
+        display: flex;
+        justify-content: center;
+    }
+    &__btn {
+        @include btn;
+        width: 160px;
+        height: 48px;
+        margin: 0 auto;
+    }
+}
