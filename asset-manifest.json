@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.3297b035.css",
-    "main.js": "/static/js/main.2b1e82d7.js",
-    "static/media/photo.png": "/static/media/photo.09b3a73291b30a6c8b97.png",
-    "static/media/pic1.png": "/static/media/pic1.4c2d0a7662e9b6331f3f.png",
-    "static/media/rabbit.png": "/static/media/rabbit.f6e38c8edc254593d9f0.png",
-    "static/media/dog.png": "/static/media/dog.5efb8e0857729dfae0ea.png",
-    "static/media/bg-2.png": "/static/media/bg-2.540b8bcba25f704b5d7f.png",
-    "static/media/pic2.png": "/static/media/pic2.8cbece038fc78e8704a7.png",
-    "static/media/bg-1.png": "/static/media/bg-1.2eb7aca5aa5319caeeb2.png",
-    "static/media/hearts.png": "/static/media/hearts.a198b29af63e223bf630.png",
-    "static/media/parrot.png": "/static/media/parrot.b28a98ad29e92bea1b1c.png",
-    "index.html": "/index.html",
-    "main.3297b035.css.map": "/static/css/main.3297b035.css.map",
-    "main.2b1e82d7.js.map": "/static/js/main.2b1e82d7.js.map"
+    "main.css": "/touchSoft-react-lab21/static/css/main.982426aa.css",
+    "main.js": "/touchSoft-react-lab21/static/js/main.9ced8aaf.js",
+    "static/media/photo.png": "/touchSoft-react-lab21/static/media/photo.09b3a73291b30a6c8b97.png",
+    "static/media/pic1.png": "/touchSoft-react-lab21/static/media/pic1.4c2d0a7662e9b6331f3f.png",
+    "static/media/rabbit.png": "/touchSoft-react-lab21/static/media/rabbit.f6e38c8edc254593d9f0.png",
+    "static/media/dog.png": "/touchSoft-react-lab21/static/media/dog.5efb8e0857729dfae0ea.png",
+    "static/media/bg-2.png": "/touchSoft-react-lab21/static/media/bg-2.540b8bcba25f704b5d7f.png",
+    "static/media/pic2.png": "/touchSoft-react-lab21/static/media/pic2.8cbece038fc78e8704a7.png",
+    "static/media/bg-1.png": "/touchSoft-react-lab21/static/media/bg-1.2eb7aca5aa5319caeeb2.png",
+    "static/media/hearts.png": "/touchSoft-react-lab21/static/media/hearts.a198b29af63e223bf630.png",
+    "static/media/parrot.png": "/touchSoft-react-lab21/static/media/parrot.b28a98ad29e92bea1b1c.png",
+    "index.html": "/touchSoft-react-lab21/index.html",
+    "main.982426aa.css.map": "/touchSoft-react-lab21/static/css/main.982426aa.css.map",
+    "main.9ced8aaf.js.map": "/touchSoft-react-lab21/static/js/main.9ced8aaf.js.map"
   },
   "entrypoints": [
-    "static/css/main.3297b035.css",
-    "static/js/main.2b1e82d7.js"
+    "static/css/main.982426aa.css",
+    "static/js/main.9ced8aaf.js"
   ]
 }
