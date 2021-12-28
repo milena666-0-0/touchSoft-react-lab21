@@ -1,0 +1,68 @@
+@import "../../../../styles//variables";
+
+.reviews {
+    padding: 58px 0 162px;
+    position: relative;
+	&__title {
+		font-weight: bold;
+		text-align: center;
+		font-size: 43px;
+		line-height: 53px;
+		color: #000000;
+		margin-bottom: 24px;
+	}
+	&__info {
+		text-align: center;
+		font-size: 20px;
+		line-height: 33px;
+		color: #000000;
+		margin-bottom: 24px;
+		a {
+			text-decoration: none;
+			color: $second-color;
+		}
+	}
+	&-slider {
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 58px 40px;
+            margin: 0 40px;
+        }
+		&__track {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            overflow-x: hidden;
+		}
+		&__item {
+			background: #dff5f6;
+			border-radius: 20px;
+			min-width: 1072px;
+			width: 100%;
+		}
+        &__item-hearts {
+            position: absolute;
+            top: 40px;
+            right: 100px;
+        }
+		&__item-text {
+			font-size: 16px;
+			line-height: 26px;
+			color: #000000;
+			margin-bottom: 8px;
+            max-width: 710px;
+		}
+        &__item-media {
+            display: flex;
+            align-items: center;
+        }
+		&__item-media span {
+			font-size: 20px;
+			line-height: 33px;
+			color: #000000;
+            margin-left: 16px;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.header {
+    &__row {
+        height: 95px;
+    }
+    &__nav {
+        display: flex;
+        &-list {
+            display: flex;
+            list-style-type: none;
+            justify-content: start;
+        }
+        &-li {
+            margin-right: 33px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &-link {
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 18px;
+            color: #000;
+        }
+    }
+    &__logo {
+        margin-right: 120px;
+    }
+   
+    &__reg {
+        display: flex;
+        align-items: center;
+    }
+    &__login {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 18px;
+        color: $second-color;
+        margin-right: 33px;
+    }
+    &__btn {
+        @include btn;
+    }
+}

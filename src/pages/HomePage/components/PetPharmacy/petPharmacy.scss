@@ -1,0 +1,36 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.pet-pharmacy {
+	text-align: center;
+    min-height: 650px;
+    padding-top: 102px;
+    background: 
+    url(../../../../assets/pet-pharmacy/bg-1.png) no-repeat left top,
+    url(../../../../assets/pet-pharmacy/bg-2.png) no-repeat right top,
+    url(../../../../assets/pet-pharmacy/rabbit.png) no-repeat 60% 100%,
+    #FEF7E5;
+	&__title {
+		font-size: 55px;
+		line-height: 67px;
+		color: #000000;
+        max-width: 556px;
+        margin: 0 auto 32px;
+	}
+	&__info {
+		font-size: 20px;
+		line-height: 28px;
+		color: #000000;
+        max-width: 490px;
+        margin: 0 auto 32px;
+	}
+    &__example {
+        text-decoration: none;
+        color: $second-color;
+    }
+    &__btn {
+        @include btn;
+        width: 156px;
+        height: 48px;
+    }
+}

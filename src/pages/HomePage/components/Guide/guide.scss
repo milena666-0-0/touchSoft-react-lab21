@@ -1,0 +1,45 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.guide {
+    text-align: center;
+	background: #FAF9F6;
+	padding: 60px 0;
+	&__title {
+		font-size: 44px;
+		line-height: 53px;
+		color: #000000;
+		margin-bottom: 65px;
+	}
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__item {
+		&-pic {
+			margin-bottom: 32px;
+		}
+		&-title {
+			font-size: 24px;
+			line-height: 32px;
+			color: $second-color;
+			margin-bottom: 8px;
+		}
+		&-desc {
+			font-size: 16px;
+			line-height: 23px;
+			color: #000000;
+			max-width: 360px;
+		}
+		&:last-child &-pic {
+			margin-bottom: 0;
+		}
+	}
+	&__btn {
+		@include btn;
+		width: 166px;
+		height: 48px;
+		margin-top: 48px;
+	}
+}
