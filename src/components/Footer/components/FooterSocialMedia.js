@@ -1,8 +1,8 @@
-import inst from '../../../assets/footer/inst.png';
-import facebook from '../../../assets/footer/facebook.png';
-import twitter from '../../../assets/footer/twitter.png';
-import smth from '../../../assets/footer/smth.png';
-import google from '../../../assets/footer/google.png';
+import inst from '../../../static/imgs/footer/inst.png';
+import facebook from '../../../static/imgs/footer/facebook.png';
+import twitter from '../../../static/imgs/footer/twitter.png';
+import smth from '../../../static/imgs/footer/smth.png';
+import google from '../../../static/imgs/footer/google.png';
 
 export const FooterSocialMedia = () => {
 	return (

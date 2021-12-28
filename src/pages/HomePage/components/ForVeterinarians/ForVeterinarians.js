@@ -1,6 +1,8 @@
+import {Button} from '../../../../components/Button/Button';
+
 import "./forVeterinarians.scss";
 
-import photo from "../../../../assets/forVeterinarians/photo.png";
+import photo from "../../../../static/imgs/forVeterinarians/photo.png";
 
 export const ForVeterinarians = () => {
 	return (
@@ -22,7 +24,7 @@ export const ForVeterinarians = () => {
 							to partner with a pharmacy that cares about customer
 							experience as much as you do.
 						</div>
-						<button className="Veterinarians__btn"type="">Learn More</button>
+						<Button width={166} height={48} label={'Learn More'}/>
 					</div>
 				</div>
 			</div>

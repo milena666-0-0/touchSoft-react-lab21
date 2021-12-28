@@ -1,10 +1,11 @@
-import { AdvicesCards } from "../components/AdvicesCards";
+import {AdvicesCardsContainer} from '../containers/AdvicesCardsContainer';
+import {Button} from '../../../../../components/Button/Button';
 
-import "../advices.scss";
+import '../advices.scss';
 
-export const AdvicesContainer = () => {
-	return (
-		<section className="advices">
+export const AdvicesView = () => {
+    return(
+        <section className="advices">
 			<div className="container">
 				<div className="advices__title">In the Wild</div>
 				<div className="advices__desc">
@@ -12,13 +13,11 @@ export const AdvicesContainer = () => {
 					communication gap, while growing the love (and understanding)
 					between you and your best pal.
 				</div>
-				<AdvicesCards />
+				<AdvicesCardsContainer />
 				<div className="advices__more">
-					<button className="advices__btn" type="">
-						View more
-					</button>
+					<Button width={160} height={48} label={'View more'}/>
 				</div>
 			</div>
 		</section>
-	);
+    )
 };

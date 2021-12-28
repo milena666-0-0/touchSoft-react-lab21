@@ -1,5 +1,7 @@
-@mixin btn {
-    width: 150px;
+@import '../../styles/variables';
+
+.btn {
+	width: 150px;
 	height: 38px;
 	background: $second-color;
 	border-radius: 24px;
@@ -8,6 +10,6 @@
 	font-size: 14px;
 	line-height: 18px;
 	color: #ffffff;
-    border: none;
-    outline: none;
+	border: none;
+	outline: none;
 }
