@@ -1,4 +1,5 @@
 export const ROUTE_NAMES = {
     Home: '/',
-    Counter: '/counter'
+    Counter: '/counter',
+    Counters: '/counters'
 };

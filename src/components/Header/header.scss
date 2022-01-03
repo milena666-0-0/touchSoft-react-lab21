@@ -1,6 +1,15 @@
 @import "../../styles/variables";
 
 .header {
+	.nav__li {
+		margin-right: 33px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__logo {
+		margin-left: 40px;
+	}
 	&__row {
 		height: 95px;
 	}
@@ -11,21 +20,9 @@
 			list-style-type: none;
 			justify-content: start;
 		}
-		&-li {
-			margin-right: 33px;
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-		&-link {
-			text-decoration: none;
-			font-size: 14px;
-			line-height: 18px;
-			color: #000;
-		}
 	}
 	&__linkers {
-        margin-left: 20px;
+		margin-left: 20px;
 		a {
 			text-decoration: none;
 			color: $second-color;

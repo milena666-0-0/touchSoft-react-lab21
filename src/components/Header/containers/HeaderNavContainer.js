@@ -1,8 +1,9 @@
-import { HeaderNavView } from "../components/HeaderNavView";
+import { NavView } from "../../NavView/NavView";
 
 import "../header.scss";
 
 export const HeaderNavContainer = () => {
+
 	const navList = [
 		{ label: "Veterinarians", pathTo: "/" },
 		{ label: "How it works", pathTo: "/" },
@@ -11,8 +12,16 @@ export const HeaderNavContainer = () => {
 		{ label: "Shop", pathTo: "/" },
 	];
 
+	const styles = {
+		'textDecoration': 'none',
+		'color': '#000',
+		'fontSize': '14px',
+		'lineHeight': '18px',
+		'cursor': 'pointer'
+	};
+
 	const navElements = navList.map((navItem) => (
-		<HeaderNavView key={navItem.label} item={navItem} />
+		<NavView key={navItem.label} item={navItem} styles={styles}/>
 	));
 
 	return (

@@ -1,4 +1,4 @@
-import {ReviewSlidesContainer} from '../container/ReviewsSlidesContainer';
+import { ReviewSlidesContainer } from "../container/ReviewsSlidesContainer";
 
 import hearts from "../../../../../static/imgs/reviews/hearts.png";
 
@@ -26,9 +26,7 @@ export const ReviewLayout = () => {
 				</span>
 				:
 			</div>
-			<div className="reviews-slider">
-                <ReviewSlidesContainer/>
-            </div>
+			<ReviewSlidesContainer />
 		</section>
 	);
 };

@@ -5,7 +5,7 @@ export const ReviewsSlidesLayout = ({item}) => {
 	const { dogPic, text, socialMedia, nickName } = item;
 
 	return (
-		<div className="reviews-slider__item">
+		<>
 			<div className="reviews-slider__item-pic">
 				<img src={dogPic} alt="dog" />
 			</div>
@@ -18,6 +18,6 @@ export const ReviewsSlidesLayout = ({item}) => {
 					<span>{nickName}</span>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };

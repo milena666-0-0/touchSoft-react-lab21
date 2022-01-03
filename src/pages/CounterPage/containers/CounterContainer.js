@@ -1,20 +1,25 @@
-import {useState} from 'react';
+import {useState, useCallback, useEffect} from 'react';
 
 import {CounterView} from '../components/CounterView';
 
-export const CounterContainer = () => {
-    const [counter, setCounter] = useState(0);
+export const CounterContainer = ({initialValue}) => {
 
-    const handleIncrement = () => {
+    const [counter, setCounter] = useState(initialValue);
+    
+    // useEffect(() => {
+    //     setCounter(initialValue);
+    // }, [initialValue]);
+
+    const handleIncrement = useCallback(() => {
         setCounter(count => count + 1);
-    };
+    }, []);
 
-    const handleDecrement = () => {
+    const handleDecrement = useCallback(() => {
         if(counter > 0) {
             setCounter(count => count - 1);
         }
-    };
-
+    }, [counter]);
+        
     return <CounterView 
     counter={counter}
     handleInc={handleIncrement}

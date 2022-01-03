@@ -1,12 +1,14 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import { ReviewsSlidesLayout } from "../components/ReviewsSlidesLayout";
 
-import "../reviews.scss";
+import 'swiper/css';
+import '../reviews.scss';
 
 import dog from "../../../../../static/imgs/reviews/dog.png";
 import inst from "../../../../../static/imgs/reviews/inst.png";
 
 export const ReviewSlidesContainer = () => {
-    
 	const slideList = [
 		{
 			dogPic: dog,
@@ -49,9 +51,22 @@ export const ReviewSlidesContainer = () => {
 		},
 	];
 
-	const slides = slideList.map((slide, i) => 
-		<ReviewsSlidesLayout key={i} item={slide} />
-	);
+	const slides = slideList.map((slide, i) => (
+		<SwiperSlide key={i} className="reviews-slider__item">
+			<ReviewsSlidesLayout item={slide} />
+		</SwiperSlide>
+	));
 
-	return <div className="reviews-slider__track">{slides}</div>;
+	return (
+		<Swiper className="reviews-slider"
+		spaceBetween={80}
+		slidesPerView={1.33}
+		centeredSlides={true}
+		effect={'cards'}
+		initialSlide={2}
+		loop={true}
+		>
+			{slides}
+		</Swiper>
+	);
 };

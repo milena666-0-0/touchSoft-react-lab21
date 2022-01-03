@@ -1,16 +1,10 @@
 import "../counter.scss";
 
-import {Link} from 'react-router-dom';
-
-export const CounterView = ({ counter, handleInc, handleDec }) => {
-	const evenNum = counter % 2 === 0 && counter !== 0;
+export const CounterView = ({counter, handleInc, handleDec }) => {
+	const evenNum = counter === 0 || counter % 2 === 0 ;
 
 	return (
 		<div className="container">
-			<div className="linkers">
-				<Link to={"/"}>Home</Link>
-				<Link to={"/counter"}>Counter</Link>
-			</div>
 			<div
 				style={{
 					backgroundColor: evenNum
@@ -23,7 +17,7 @@ export const CounterView = ({ counter, handleInc, handleDec }) => {
 					{counter}
 				</span>
 				<span className="counter__span counter__span-even">
-					{evenNum ? "Введено четное число" : "..."}
+					{evenNum ? "Введено четное число" : "Введено нечетное число"}
 				</span>
 				<div className="counter__btns">
 					<button onClick={() => handleInc()} className="btn">

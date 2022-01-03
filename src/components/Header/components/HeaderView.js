@@ -12,7 +12,9 @@ export const HeaderView = () => {
 				<div className="row header__row">
 					<HeaderNavContainer />
 					<div className="header__logo">
-						<img src={logo} alt="" />
+						<Link to="/">
+							<img src={logo} alt="" />
+						</Link>
 					</div>
 					<div className="header__reg">
 						<div>
@@ -24,7 +26,7 @@ export const HeaderView = () => {
 							<Button width={150} height={38} label={"Try Mixlab"} />
 						</div>
 						<div className="header__linkers">
-							<Link to={"/"}>Home</Link>
+							<Link to={"/counters"}>Counters</Link>
 							<Link to={"/counter"}>Counter</Link>
 						</div>
 					</div>
