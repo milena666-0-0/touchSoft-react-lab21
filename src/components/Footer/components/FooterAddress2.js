@@ -1,6 +1,8 @@
+import {FooterColumn} from './FooterColumn';
+
 export const FooterAddress2 = () => {
 	return (
-		<div className="footer__nav">
+		<FooterColumn>
 			<div className="footer__nav-name">Los Angeles</div>
 			<div className="footer__li">
 				<a className="footer__link" href="">
@@ -20,6 +22,6 @@ export const FooterAddress2 = () => {
 					</a>
 				</div>
 			</div>
-		</div>
+		</FooterColumn>
 	);
 };

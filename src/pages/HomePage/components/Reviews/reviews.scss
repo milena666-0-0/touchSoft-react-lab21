@@ -20,6 +20,7 @@
 		a {
 			text-decoration: none;
 			color: $second-color;
+			margin: 0 4px;
 		}
 	}
 	&-slider {
@@ -28,22 +29,14 @@
             align-items: center;
             justify-content: space-between;
             padding: 58px 40px;
-            margin: 0 40px;
-        }
-		&__track {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-            overflow-x: hidden;
-		}
-		&__item {
 			background: #dff5f6;
 			border-radius: 20px;
 			min-width: 1072px;
 			width: 100%;
-		}
+        }
         &__item-hearts {
             position: absolute;
+			z-index: 9999;
             top: 40px;
             right: 100px;
         }

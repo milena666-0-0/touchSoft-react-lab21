@@ -1,11 +1,16 @@
 .footer {
 	background: #48156d;
 	padding: 56px 0 32px;
-	a {
+	.nav__li {
+		margin-bottom: 4px;
+		list-style-type: none;
+	}
+	.nav__link {
 		text-decoration: none;
 		font-size: 13px;
 		line-height: 18px;
 		color: #ffffff;
+		cursor: pointer;
 	}
 	&__container {
 		max-width: 947px;
@@ -27,15 +32,18 @@
 	&__nav {
 		margin-right: 45px;
 	}
-	&__nav-li {
-		margin-bottom: 4px;
-	}
 	&__list {
 		list-style: none;
 	}
 	&__li {
 		margin-bottom: 16px;
 		max-width: 175px;
+	}
+	&__link {
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 18px;
+		color: #ffffff;
 	}
 	&__media {
 		max-width: 177px;
@@ -49,6 +57,7 @@
 	&__policy {
 		margin-top: 60px;
 		a {
+			text-decoration: none;
 			font-size: 14px;
 			line-height: 18px;
 			color: #ffffff;

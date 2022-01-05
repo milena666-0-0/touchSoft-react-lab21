@@ -1,10 +1,9 @@
-@import "../../../../styles/mixins";
 @import "../../../../styles/variables";
 
 .advices {
 	background: 
-	url(../../../../assets//advices/bg-1.png) no-repeat 0 50%,
-	url(../../../../assets//advices/bg-2.png) no-repeat 100% 75%,
+	url(../../../../static/imgs/advices//bg-1.png) no-repeat 0 50%,
+	url(../../../../static/imgs/advices//bg-2.png) no-repeat 100% 75%,
 	#faf9f6;
 	padding: 58px 0;
 	&__title {
@@ -67,11 +66,5 @@
     &__more {
         display: flex;
         justify-content: center;
-    }
-    &__btn {
-        @include btn;
-        width: 160px;
-        height: 48px;
-        margin: 0 auto;
     }
 }

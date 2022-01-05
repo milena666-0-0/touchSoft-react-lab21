@@ -1,8 +1,8 @@
-import { FooterNav } from "../components/FooterNav";
-import { FooterContacts } from "../components/FooterContacts";
+import { FooterNavContainer } from "./FooterNavContainer";
+import { FooterContactsContainer } from "./FooterContactsContainer";
 import { FooterAddress1 } from "../components/FooterAddress1";
 import { FooterAddress2 } from "../components/FooterAddress2";
-import { FooterSocialMedia } from "../components/FooterSocialMedia";
+import { FooterSocialMediaContainer } from "../container/FooterSocialMediaContainer";
 
 import "../footer.scss";
 
@@ -12,11 +12,11 @@ export const FooterContainer = () => {
 			<div className="container">
 				<div className="footer__container">
 				<div className="footer__row">
-					<FooterNav />
-					<FooterContacts />
-					<FooterAddress1 />
+					<FooterNavContainer />
+					<FooterContactsContainer />
+					< FooterAddress1/>
 					<FooterAddress2 />
-					<FooterSocialMedia />
+					<FooterSocialMediaContainer />
 				</div>
 				<div className="footer__policy">
 					<span>

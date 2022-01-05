@@ -1,5 +1,3 @@
-@import '../../../../styles/mixins';
-@import '../../../../styles/variables';
 
 .Veterinarians {
     background: #F6F3FA;
@@ -33,9 +31,4 @@
 		color: #000000;
         margin-bottom: 26px;
 	}
-    &__btn {
-        @include btn;
-        width: 166px;
-        height: 48px;
-    }
 }

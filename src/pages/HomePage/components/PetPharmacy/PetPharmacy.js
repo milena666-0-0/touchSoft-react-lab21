@@ -1,4 +1,6 @@
-import './petPharmacy.scss';
+import {Button} from '../../../../components/Button/Button';
+
+import "./petPharmacy.scss";
 
 export const PetPharmacy = () => {
 	return (
@@ -8,27 +10,42 @@ export const PetPharmacy = () => {
 					The pet pharmacy humans are jealous of.
 				</div>
 				<div className="pet-pharmacy__info">
-					5 stars on{" "}
+					5 stars on
+
 					<span>
+
 						<a className="pet-pharmacy__example" href="">
+
 							Yelp
+
 						</a>
-					</span>{" "}
+
+					</span>
+
 					,
 					<span>
+
 						<a className="pet-pharmacy__example" href="">
+
 							Google
+
 						</a>
-					</span>{" "}
+
+					</span>
+
 					and
 					<span>
+
 						<a className="pet-pharmacy__example" href="">
+							
 							Facebook
+
 						</a>
+
 					</span>
 					because your best friend deserves only the best in pet care.
 				</div>
-				<button className="pet-pharmacy__btn" type="">Try Mixlab</button>
+				<Button width={156} height={48} label={'Try Mixlab'}/>
 			</div>
 		</section>
 	);
