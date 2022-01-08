@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 
 export const NavView = ({item, styles}) => {
 
@@ -5,9 +7,9 @@ export const NavView = ({item, styles}) => {
 
 	return (
 		<li className="nav__li">
-			<a style={styles} className="nav__link" href={pathTo}>
+			<Link style={styles} className="nav__link" to={pathTo}>
 				{label}
-			</a>
+			</Link>
 		</li>
 	);
 };

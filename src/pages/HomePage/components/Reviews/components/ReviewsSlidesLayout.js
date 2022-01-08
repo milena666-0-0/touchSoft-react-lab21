@@ -1,7 +1,6 @@
-import '../reviews.scss';
+import "../reviews.scss";
 
-export const ReviewsSlidesLayout = ({item}) => {
-
+export const ReviewsSlidesLayout = ({ item }) => {
 	const { dogPic, text, socialMedia, nickName } = item;
 
 	return (
@@ -10,7 +9,9 @@ export const ReviewsSlidesLayout = ({item}) => {
 				<img src={dogPic} alt="dog" />
 			</div>
 			<div className="reviews-slider__item-info">
-				<div className="reviews-slider__item-text">{text}</div>
+				<div className="reviews-slider__item-text">
+					{text}
+				</div>
 				<div className="reviews-slider__item-media">
 					<a href="">
 						<img src={socialMedia} alt="instagram" />

@@ -1,32 +1,39 @@
 import { NavView } from "../../NavView/NavView";
+import { navData } from "../../../static/data/header/headerNavData";
 
 import "../header.scss";
 
-export const HeaderNavContainer = () => {
+export const HeaderNavContainer = ({handleActiveBurgerMenu}) => {
 
-	const navList = [
-		{ label: "Veterinarians", pathTo: "/" },
-		{ label: "How it works", pathTo: "/" },
-		{ label: "About us", pathTo: "/" },
-		{ label: "Blog", pathTo: "/" },
-		{ label: "Shop", pathTo: "/" },
-	];
 
-	const styles = {
-		'textDecoration': 'none',
-		'color': '#000',
-		'fontSize': '14px',
-		'lineHeight': '18px',
-		'cursor': 'pointer'
+	const hideRoutingIntoMenu = () => {
+
+		const newNavList = [
+			...navData,
+			{label: 'Home', pathTo: '/'},
+			{label: 'Counters', pathTo: '/counters'},
+			{label: 'Counter', pathTo: '/counter'}
+		];
+		
+		return window.screen.width <= 576 ? newNavList : navData;
+
 	};
 
-	const navElements = navList.map((navItem) => (
-		<NavView key={navItem.label} item={navItem} styles={styles}/>
-	));
+	const navList = hideRoutingIntoMenu();
+
+	const styles = {
+		textDecoration: "none",
+		color: "#000",
+		fontSize: "14px",
+		lineHeight: "18px",
+		cursor: "pointer",
+	};
 
 	return (
-		<ul className="header__nav-list">
-			{navElements}
+		<ul className="header__nav-list" onClick={handleActiveBurgerMenu}>
+			{navList.map((navItem) => (
+				<NavView key={navItem.label} item={navItem} styles={styles} />
+			))}
 		</ul>
 	);
 };

@@ -1,6 +1,8 @@
-@import '../../../../styles/variables';
+@import "../../../../styles/variables";
 
 .companies {
-    background: $second-color;
-    padding: 40px 0 24px;
+	background: $second-color;
+	padding: 40px 0 24px;
 }
+
+@import './companiesAdaptive';

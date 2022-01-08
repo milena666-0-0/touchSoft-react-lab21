@@ -1,27 +1,28 @@
-import {useState, useCallback, useEffect} from 'react';
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
-import {CounterView} from '../components/CounterView';
+import { MemorizedCounterView } from "../components/CounterView";
 
-export const CounterContainer = ({initialValue}) => {
+export const CounterContainer = ({ id = uuidv4() }) => {
 
-    const [counter, setCounter] = useState(initialValue);
-    
-    // useEffect(() => {
-    //     setCounter(initialValue);
-    // }, [initialValue]);
+	const [counter, setCounter] = useState(0);
 
-    const handleIncrement = useCallback(() => {
-        setCounter(count => count + 1);
-    }, []);
+	const handleIncrement = () => {
+		setCounter((count) => count + 1);
+	};
 
-    const handleDecrement = useCallback(() => {
-        if(counter > 0) {
-            setCounter(count => count - 1);
-        }
-    }, [counter]);
-        
-    return <CounterView 
-    counter={counter}
-    handleInc={handleIncrement}
-    handleDec={handleDecrement}/>
+	const handleDecrement = () => {
+		if (counter > 0) {
+			setCounter((count) => count - 1);
+		}
+	};
+
+	return (
+		<MemorizedCounterView
+			counter={counter}
+			handleIncrement={handleIncrement}
+			handleDecrement={handleDecrement}
+			id={id}
+		/>
+	);
 };

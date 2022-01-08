@@ -1,5 +1,5 @@
 
-.Veterinarians {
+.veterinarians {
     background: #F6F3FA;
     &__info {
         max-width: 546px;
@@ -32,3 +32,5 @@
         margin-bottom: 26px;
 	}
 }
+
+@import './forVeterinariesAdaptive';
