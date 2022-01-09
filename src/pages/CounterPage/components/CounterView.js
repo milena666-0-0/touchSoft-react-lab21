@@ -1,7 +1,10 @@
+import { memo } from "react";
+
 import "../counter.scss";
 
-export const CounterView = ({counter, handleInc, handleDec }) => {
-	const evenNum = counter === 0 || counter % 2 === 0 ;
+export const CounterView = ({handleIncrement, handleDecrement, id, counter}) => {
+
+ 	const evenNum = counter % 2 === 0;
 
 	return (
 		<div className="container">
@@ -20,10 +23,10 @@ export const CounterView = ({counter, handleInc, handleDec }) => {
 					{evenNum ? "Введено четное число" : "Введено нечетное число"}
 				</span>
 				<div className="counter__btns">
-					<button onClick={() => handleInc()} className="btn">
+					<button onClick={() => handleIncrement(id)} className="btn">
 						+
 					</button>
-					<button onClick={() => handleDec()} className="btn">
+					<button onClick={() => handleDecrement(id)} className="btn">
 						-
 					</button>
 				</div>
@@ -31,3 +34,5 @@ export const CounterView = ({counter, handleInc, handleDec }) => {
 		</div>
 	);
 };
+
+export const MemorizedCounterView = memo(CounterView);

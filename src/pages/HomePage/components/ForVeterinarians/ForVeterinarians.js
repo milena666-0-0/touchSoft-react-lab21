@@ -6,18 +6,18 @@ import photo from "../../../../static/imgs/forVeterinarians/photo.png";
 
 export const ForVeterinarians = () => {
 	return (
-		<section className="Veterinarians">
+		<section className="veterinarians">
 			<div className="container">
-				<div className="Veterinarians__row">
-					<div className="Veterinarians__photo">
+				<div className="veterinarians__row">
+					<div className="veterinarians__photo">
 						<img src={photo} alt="" />
 					</div>
-					<div className="Veterinarians__info">
-						<div className="Veterinarians__name">For Veterinarians</div>
-						<div className="Veterinarians__title">
+					<div className="veterinarians__info">
+						<div className="veterinarians__name">For Veterinarians</div>
+						<div className="veterinarians__title">
 							We're here to support you and your practice
 						</div>
-						<div className="Veterinarians__text">
+						<div className="veterinarians__text">
 							Mixlab offers a simple, fast, reliable (and fun) home
 							delivery pharmacy service for your clients. No more delays,
 							no more miscommunications, no more grumpy pets. It’s time

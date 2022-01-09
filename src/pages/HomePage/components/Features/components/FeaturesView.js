@@ -14,7 +14,7 @@ export const FeaturesView = () => {
 							We couldn’t find a pharmacy experience worthy of our best
 							buds— so we created one.
 						</div>
-						<div>
+						<div className="features__pic">
                             <img src={dog} alt="dog"/>
                         </div>
 					</div>

@@ -1,39 +1,64 @@
-import { useState, useCallback, Fragment } from "react";
+import { useState, useCallback } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import { CountersPageView } from "../components/CountersPageView";
-import { CounterContainer } from "../../CounterPage/containers/CounterContainer";
+import { MemorizedCountersPageView } from "../components/CountersPageView";
+import { MemorizedCounterView } from "../../CounterPage/components/CounterView";
 
 export const CountersContainer = () => {
 	const [counters, setCounters] = useState([]);
 
 	const addCounter = useCallback(() => {
-        
 		const newCounter = {
 			id: uuidv4(),
 			initialValue: 0,
 		};
 
-		const evenCountersValueInc = counters.map((counter) => {
-			if (counter.initialValue % 2 === 0) {
-				return {
-					id: counter.id,
-					initialValue: counter.initialValue + 1,
-				};
-			}
-			return counter;
-		});
+		const evenCountersValueInc = counters.map((counter) =>
+			counter.initialValue % 2 === 0
+				? { id: counter.id, initialValue: counter.initialValue + 1 }
+				: counter
+		);
 
 		setCounters([newCounter, ...evenCountersValueInc]);
 	}, [counters]);
 
-	const delCounter = () => {
-		const newListOfCounters = [...counters.slice(0, counters.length - 1)];
+	const handleIncrement = (id) => {
+		const newListOfCounters = counters.map((counterItem) =>
+			counterItem.id !== id
+				? counterItem
+				: { id, initialValue: counterItem.initialValue + 1 }
+		);
+		setCounters(newListOfCounters);
+	};
+
+	const handleDecrement = (id) => {
+		
+		const newListOfCounters = counters.map((counterItem) =>
+			counterItem.id !== id
+				? counterItem
+				: { id, initialValue: counterItem.initialValue - 1 }
+		);
+
+		counters.forEach(counter => {
+			if(counter.id === id && counter.initialValue > 0) {
+				setCounters(newListOfCounters);
+			}
+		})
+	};
+
+	const delCounter = useCallback(() => {
+		const oddCountersValueDec = counters
+			.map((counter) =>
+				counter.initialValue % 2 !== 0
+					? { id: counter.id, initialValue: counter.initialValue - 1 }
+					: counter
+			)
+			.splice(0, counters.length - 1);
 
 		if (counters.length > 0) {
-			setCounters(newListOfCounters);
+			setCounters(oddCountersValueDec);
 		}
-	};
+	}, [counters]);
 
 	const reset = useCallback(() => {
 		if (counters.length > 0) {
@@ -41,30 +66,26 @@ export const CountersContainer = () => {
 		}
 	}, [counters]);
 
-	// console.log(counters);
-
-	let sum = 0;
-
-	const renderCounters = (countersList) => {
-		const elements = countersList.map(({ id, counter }) => (
-			<CounterContainer key={id} initialValue={counter} />
-		));
-
-		return elements;
-	};
-
-	const countersAmount = renderCounters(counters);
+	const sum = counters.reduce((acc, counter) => acc + counter.initialValue, 0);
 
 	return (
 		<>
-			<CountersPageView
+			<MemorizedCountersPageView
 				addCounter={addCounter}
 				delCounter={delCounter}
 				reset={reset}
 				counterNum={counters.length}
 				sum={sum}
 			/>
-			{countersAmount}
+			{counters.map(({ id, initialValue }) => (
+				<MemorizedCounterView
+					key={id}
+					id={id}
+					counter={initialValue}
+					handleDecrement={handleDecrement}
+					handleIncrement={handleIncrement}
+				/>
+			))}
 		</>
 	);
 };
