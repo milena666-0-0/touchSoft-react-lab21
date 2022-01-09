@@ -8,6 +8,7 @@ export const CountersContainer = () => {
 	const [counters, setCounters] = useState([]);
 
 	const addCounter = useCallback(() => {
+		
 		const newCounter = {
 			id: uuidv4(),
 			initialValue: 0,
@@ -32,7 +33,7 @@ export const CountersContainer = () => {
 	};
 
 	const handleDecrement = (id) => {
-		
+
 		const newListOfCounters = counters.map((counterItem) =>
 			counterItem.id !== id
 				? counterItem
