@@ -28,18 +28,22 @@ export const CountersContainer = () => {
 				? counterItem
 				: { id, initialValue: counterItem.initialValue + 1 }
 		);
-
 		setCounters(newListOfCounters);
 	};
 
 	const handleDecrement = (id) => {
+		
 		const newListOfCounters = counters.map((counterItem) =>
 			counterItem.id !== id
 				? counterItem
 				: { id, initialValue: counterItem.initialValue - 1 }
 		);
 
-		setCounters(newListOfCounters);
+		counters.forEach(counter => {
+			if(counter.id === id && counter.initialValue > 0) {
+				setCounters(newListOfCounters);
+			}
+		})
 	};
 
 	const delCounter = useCallback(() => {

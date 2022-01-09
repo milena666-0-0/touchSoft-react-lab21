@@ -7,11 +7,11 @@ import { Button } from "../../Button/Button";
 import logo from "../../../static/imgs/header/logo.png";
 
 export const HeaderView = ({ handleActiveBurgerMenu, activeMenu }) => {
+
 	const activeMenuClass = classNames(
 		"header__burger-menu", 
 		{"header__burger-menu--active": activeMenu},
 	);
-
 
 	return (
 		<header className="header">
