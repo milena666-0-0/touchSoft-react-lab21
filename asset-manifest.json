@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/touchSoft-react-lab21/static/css/main.fb19b275.css",
-    "main.js": "/touchSoft-react-lab21/static/js/main.a6cd22b2.js",
+    "main.js": "/touchSoft-react-lab21/static/js/main.ef101274.js",
     "static/media/photo.png": "/touchSoft-react-lab21/static/media/photo.09b3a73291b30a6c8b97.png",
     "static/media/pic1.png": "/touchSoft-react-lab21/static/media/pic1.4c2d0a7662e9b6331f3f.png",
     "static/media/rabbit.png": "/touchSoft-react-lab21/static/media/rabbit.f6e38c8edc254593d9f0.png",
@@ -13,10 +13,10 @@
     "static/media/parrot.png": "/touchSoft-react-lab21/static/media/parrot.b28a98ad29e92bea1b1c.png",
     "index.html": "/touchSoft-react-lab21/index.html",
     "main.fb19b275.css.map": "/touchSoft-react-lab21/static/css/main.fb19b275.css.map",
-    "main.a6cd22b2.js.map": "/touchSoft-react-lab21/static/js/main.a6cd22b2.js.map"
+    "main.ef101274.js.map": "/touchSoft-react-lab21/static/js/main.ef101274.js.map"
   },
   "entrypoints": [
     "static/css/main.fb19b275.css",
-    "static/js/main.a6cd22b2.js"
+    "static/js/main.ef101274.js"
   ]
 }
