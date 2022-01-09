@@ -7,10 +7,6 @@
 			margin-right: 0;
 		}
 	}
-	&__burger-menu {
-		cursor: pointer;
-		display: none;
-	}
 	&__logo {
 		margin-left: 40px;
 	}
@@ -32,9 +28,6 @@
 			color: $second-color;
 			margin: 0 5px;
 		}
-		&-home {
-			display: none;
-		}
 	}
 	&__reg {
 		display: flex;
@@ -48,6 +41,3 @@
 		margin-right: 33px;
 	}
 }
-
-@import "./headerAdaptive";
-

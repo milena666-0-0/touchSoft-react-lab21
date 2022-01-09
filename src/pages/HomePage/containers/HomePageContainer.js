@@ -5,7 +5,7 @@ import {GuideContainer} from '../components/Guide/container/GuideContainer';
 import {ForVeterinarians} from '../components/ForVeterinarians/ForVeterinarians';
 import {ReviewsContainer} from '../components/Reviews/container/ReviewsContainer';
 import {AdvicesContainer} from '../components/Advices/containers/AdvicesContainer';
-import {CompaniesContainer} from '../components/Companies/containers/CompaniesContainer';
+import {Companies} from '../components/Companies/Companies';
 import {FooterContainer} from '../../../components/Footer/container/FooterContainer';
 
 export const HomePageContainer = () => {
@@ -18,7 +18,7 @@ export const HomePageContainer = () => {
 			<ForVeterinarians/>
 			<ReviewsContainer/>
 			<AdvicesContainer/>
-			<CompaniesContainer/>
+			<Companies/>
 			<FooterContainer/>
 		</>
 	);

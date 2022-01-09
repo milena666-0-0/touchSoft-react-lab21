@@ -1,7 +1,6 @@
 .counter {
 	margin: 70px auto;
-	max-width: 500px;
-	width: 100%;
+	width: 500px;
 	height: 400px;
     padding: 50px 0;
 	transition: all 0.2s;
@@ -56,5 +55,3 @@
 		margin: 0 5px;
 	}
 }
-
-@import './counterAdaptive';
