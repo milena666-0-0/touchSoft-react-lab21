@@ -13,7 +13,7 @@ export const ReviewsSlidesLayout = ({ item }) => {
 					{text}
 				</div>
 				<div className="reviews-slider__item-media">
-					<a href="">
+					<a href="/">
 						<img src={socialMedia} alt="instagram" />
 					</a>
 					<span>{nickName}</span>

@@ -20,13 +20,13 @@ export const FooterContainer = () => {
 				</div>
 				<div className="footer__policy">
 					<span>
-						<a href="">2021 Mixlab, Inc.</a>
+						<a href="/">2021 Mixlab, Inc.</a>
 					</span>
 					<span>
-						<a href="">Privacy Policy</a>
+						<a href="/">Privacy Policy</a>
 					</span>
 					<span>
-						<a href="">Terms of Service</a>
+						<a href="/">Terms of Service</a>
 					</span>
 				</div>
 				</div>

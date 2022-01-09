@@ -12,19 +12,19 @@ export const PetPharmacy = () => {
 				<div className="pet-pharmacy__info">
 					5 stars on
 					<span>
-						<a className="pet-pharmacy__example" href="">
+						<a className="pet-pharmacy__example" href="/">
 							Yelp
 						</a>
 					</span>
 					,
 					<span>
-						<a className="pet-pharmacy__example" href="">
+						<a className="pet-pharmacy__example" href="/">
 							Google
 						</a>
 					</span>
 					and
 					<span>
-						<a className="pet-pharmacy__example" href="">
+						<a className="pet-pharmacy__example" href="/">
 							Facebook
 						</a>
 					</span>
