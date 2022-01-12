@@ -1,6 +1,6 @@
 import { FooterColumn } from "../components/FooterColumn";
 import { NavView } from "../../NavView/NavView";
-import { footerNavList } from "../../../static/data/footer/footerNavListData";
+import { footerNavList } from "../config/footerNavListData";
 
 import "../footer.scss";
 

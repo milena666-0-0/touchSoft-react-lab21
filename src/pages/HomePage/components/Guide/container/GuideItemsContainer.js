@@ -1,5 +1,5 @@
 import { GuideItemsView } from "../components/GuideItemsView";
-import { guideList } from "../../../../../static/data/guide/guideListData";
+import { guideList } from "../config/guideListData";
 
 import "../guide.scss";
 

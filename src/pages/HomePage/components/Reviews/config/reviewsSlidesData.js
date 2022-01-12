@@ -1,5 +1,5 @@
-import dog from "../../imgs/reviews/dog.png";
-import inst from "../../imgs/reviews/inst.png";
+import dog from "../../../../../static/imgs/reviews/dog.png";
+import inst from "../../../../../static/imgs/reviews/inst.png";
 
 export const slideList = [
     {

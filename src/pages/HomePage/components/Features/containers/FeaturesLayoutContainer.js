@@ -1,5 +1,5 @@
 import { FeaturesLayoutView } from "../components/FeaturesLayoutView";
-import { featuresList } from "../../../../../static/data/features/featuresData";
+import { featuresList } from "../config/featuresData";
 
 import "../features.scss";
 

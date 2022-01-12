@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import { FooterColumn } from "../components/FooterColumn";
 import { NavView } from "../../NavView/NavView";
-import { footerContactsList } from "../../../static/data/footer/footerContactsData";
+import { footerContactsList } from "../config/footerContactsData";
 
 export const FooterContactsContainer = () => {
 	return (

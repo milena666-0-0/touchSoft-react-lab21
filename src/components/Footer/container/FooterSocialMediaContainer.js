@@ -1,6 +1,6 @@
 import { FooterColumn } from "../components/FooterColumn";
 import { FooterSocialMediaView } from "../components/FooterSocialMediaView";
-import { socialMediaList } from "../../../static/data/footer/footerSocialMediaData";
+import { socialMediaList } from "../config/footerSocialMediaData";
 
 export const FooterSocialMediaContainer = () => {
 	return (

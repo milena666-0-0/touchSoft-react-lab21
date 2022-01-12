@@ -1,5 +1,5 @@
 import { CompaniesItemView } from "../components/CompaniesItemView";
-import { companiesList } from "../../../../../static/data/companies/companiesData";
+import { companiesList } from "../config/companiesData";
 
 import "../companies.scss";
 

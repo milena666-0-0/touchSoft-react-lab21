@@ -1,5 +1,5 @@
 import { NavView } from "../../NavView/NavView";
-import { navData } from "../../../static/data/header/headerNavData";
+import { navData } from "../config/headerNavData";
 
 import "../header.scss";
 
