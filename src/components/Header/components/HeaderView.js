@@ -31,7 +31,7 @@ export const HeaderView = ({ handleActiveBurgerMenu, activeMenu }) => {
 					</div>
 					<div className="header__reg">
 						<div>
-							<a className="header__login" href="">
+							<a className="header__login" href="/">
 								Veterinarian login
 							</a>
 						</div>

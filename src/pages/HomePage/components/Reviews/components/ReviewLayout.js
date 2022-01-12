@@ -14,15 +14,15 @@ export const ReviewLayout = () => {
 			<div className="reviews__info">
 				See why we're 5 stars on
 				<span>
-					<a href="">Yelp</a>
+					<a href="/">Yelp</a>
 				</span>
 				,
 				<span>
-					<a href="">Google</a>
+					<a href="/">Google</a>
 				</span>
 				and
 				<span>
-					<a href="">Facebook</a>
+					<a href="/">Facebook</a>
 				</span>
 				:
 			</div>

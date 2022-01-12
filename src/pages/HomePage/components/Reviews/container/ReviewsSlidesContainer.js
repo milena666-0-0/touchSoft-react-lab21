@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { ReviewsSlidesLayout } from "../components/ReviewsSlidesLayout";
-import { slideList } from "../../../../../static/data/reviews/reviewsSlidesData";
+import { slideList } from "../config/reviewsSlidesData";
 
 import "swiper/css";
 import "../reviews.scss";

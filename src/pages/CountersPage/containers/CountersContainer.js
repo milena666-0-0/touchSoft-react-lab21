@@ -8,6 +8,7 @@ export const CountersContainer = () => {
 	const [counters, setCounters] = useState([]);
 
 	const addCounter = useCallback(() => {
+
 		const newCounter = {
 			id: uuidv4(),
 			initialValue: 0,
@@ -22,17 +23,19 @@ export const CountersContainer = () => {
 		setCounters([newCounter, ...evenCountersValueInc]);
 	}, [counters]);
 
-	const handleIncrement = (id) => {
+	const handleIncrement = useCallback((id) => {
+
 		const newListOfCounters = counters.map((counterItem) =>
 			counterItem.id !== id
 				? counterItem
 				: { id, initialValue: counterItem.initialValue + 1 }
 		);
-		setCounters(newListOfCounters);
-	};
 
-	const handleDecrement = (id) => {
-		
+		setCounters(newListOfCounters);
+	}, [counters]);
+
+	const handleDecrement = useCallback((id) => {
+
 		const newListOfCounters = counters.map((counterItem) =>
 			counterItem.id !== id
 				? counterItem
@@ -43,8 +46,9 @@ export const CountersContainer = () => {
 			if(counter.id === id && counter.initialValue > 0) {
 				setCounters(newListOfCounters);
 			}
-		})
-	};
+		});
+
+	}, [counters]);
 
 	const delCounter = useCallback(() => {
 		const oddCountersValueDec = counters
@@ -61,9 +65,11 @@ export const CountersContainer = () => {
 	}, [counters]);
 
 	const reset = useCallback(() => {
+
 		if (counters.length > 0) {
 			setCounters([]);
 		}
+		
 	}, [counters]);
 
 	const sum = counters.reduce((acc, counter) => acc + counter.initialValue, 0);

@@ -1,5 +1,5 @@
 import { NavView } from "../../NavView/NavView";
-import { navData } from "../../../static/data/header/headerNavData";
+import { navData } from "../config/headerNavData";
 
 import "../header.scss";
 
@@ -28,6 +28,7 @@ export const HeaderNavContainer = ({handleActiveBurgerMenu}) => {
 		lineHeight: "18px",
 		cursor: "pointer",
 	};
+
 
 	return (
 		<ul className="header__nav-list" onClick={handleActiveBurgerMenu}>

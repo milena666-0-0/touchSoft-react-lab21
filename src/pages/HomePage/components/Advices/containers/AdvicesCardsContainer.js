@@ -1,5 +1,5 @@
 import { AdvicesCardsView } from "../components/AdvicesCardsView";
-import { cardsList } from "../../../../../static/data/advices/cardsData";
+import { cardsList } from "../config/cardsData";
 
 import "../advices.scss";
 

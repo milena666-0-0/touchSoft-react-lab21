@@ -22,7 +22,7 @@
 		&-list {
 			display: flex;
 			list-style-type: none;
-			justify-content: start;
+			justify-content: flex-start;
 		}
 	}
 	&__linkers {
@@ -50,4 +50,3 @@
 }
 
 @import "./headerAdaptive";
-

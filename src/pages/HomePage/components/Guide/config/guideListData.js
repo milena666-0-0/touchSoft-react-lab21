@@ -1,6 +1,6 @@
-import pic1 from "../../imgs/guide/parrot.png";
-import pic2 from "../../imgs/guide/rabbit.png";
-import pic3 from "../../imgs/guide/dog.png";
+import pic1 from "../../../../../static/imgs/guide/parrot.png";
+import pic2 from "../../../../../static/imgs/guide/rabbit.png";
+import pic3 from "../../../../../static/imgs/guide/dog.png";
 
 export const guideList = [
     {

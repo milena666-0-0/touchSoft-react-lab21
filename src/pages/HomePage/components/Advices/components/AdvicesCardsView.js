@@ -15,7 +15,7 @@ export const AdvicesCardsView = ({item}) => {
 				<div className="advices__card-text">
 					{desc}
 				</div>
-				<a className="advices__card-link" href="">
+				<a className="advices__card-link" href="/">
 					Read the article
 				</a>
 			</div>
