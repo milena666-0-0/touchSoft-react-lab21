@@ -29,6 +29,7 @@ export const HeaderNavContainer = ({handleActiveBurgerMenu}) => {
 		cursor: "pointer",
 	};
 
+
 	return (
 		<ul className="header__nav-list" onClick={handleActiveBurgerMenu}>
 			{navList.map((navItem) => (
