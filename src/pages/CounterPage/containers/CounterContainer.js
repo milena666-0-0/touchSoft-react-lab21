@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import { MemorizedCounterView } from "../components/CounterView";
+import { CounterView } from "../components/CounterView";
 
 export const CounterContainer = ({ id = uuidv4() }) => {
 
@@ -18,7 +18,7 @@ export const CounterContainer = ({ id = uuidv4() }) => {
 	}, [counter]);
 
 	return (
-		<MemorizedCounterView
+		<CounterView
 			counter={counter}
 			handleIncrement={handleIncrement}
 			handleDecrement={handleDecrement}

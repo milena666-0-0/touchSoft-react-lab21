@@ -1,10 +1,12 @@
-import { memo } from "react";
+import {memo} from 'react';
+
+import {isEven} from '../../../utils/isEven';
 
 import "../counter.scss";
 
-export const CounterView = ({handleIncrement, handleDecrement, id, counter}) => {
+export const CounterView = memo(({handleIncrement, handleDecrement, id, counter}) => {
 
- 	const evenNum = counter % 2 === 0;
+ 	const evenNum = isEven(counter);
 
 	return (
 		<div className="container">
@@ -33,6 +35,4 @@ export const CounterView = ({handleIncrement, handleDecrement, id, counter}) => 
 			</div>
 		</div>
 	);
-};
-
-export const MemorizedCounterView = memo(CounterView);
+});

@@ -1,97 +1,58 @@
-import { useState, useCallback } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { useCallback } from "react";
+import {useDispatch, useSelector} from 'react-redux';
 
-import { MemorizedCountersPageView } from "../components/CountersPageView";
-import { MemorizedCounterView } from "../../CounterPage/components/CounterView";
+import { CountersPageLayout } from "../components/CountersPageLayout";
+import {
+	CREATE_COUNTER,
+	DELETE_COUNTER,
+	INCREMENT_COUNTER,
+	DECREMENT_COUNTER,
+	RESET_COUNTERS,
+} from "../actions/index";
+import {total} from '../selectors/index';
 
 export const CountersContainer = () => {
-	const [counters, setCounters] = useState([]);
 
-	const addCounter = useCallback(() => {
+	const dispatch = useDispatch();
 
-		const newCounter = {
-			id: uuidv4(),
-			initialValue: 0,
-		};
+	const {counters} = useSelector(state => state.countersManagerPage);
+	const sum = useSelector(total);
 
-		const evenCountersValueInc = counters.map((counter) =>
-			counter.initialValue % 2 === 0
-				? { id: counter.id, initialValue: counter.initialValue + 1 }
-				: counter
-		);
-
-		setCounters([newCounter, ...evenCountersValueInc]);
-	}, [counters]);
+	const handleCreateCounter = useCallback(() => {
+		dispatch(CREATE_COUNTER());
+	}, []);
 
 	const handleIncrement = useCallback((id) => {
-
-		const newListOfCounters = counters.map((counterItem) =>
-			counterItem.id !== id
-				? counterItem
-				: { id, initialValue: counterItem.initialValue + 1 }
-		);
-
-		setCounters(newListOfCounters);
-	}, [counters]);
+		dispatch(INCREMENT_COUNTER(id));
+	}, []);
 
 	const handleDecrement = useCallback((id) => {
+		dispatch(DECREMENT_COUNTER(id));
+	}, []);
 
-		const newListOfCounters = counters.map((counterItem) =>
-			counterItem.id !== id
-				? counterItem
-				: { id, initialValue: counterItem.initialValue - 1 }
-		);
-
-		counters.forEach(counter => {
-			if(counter.id === id && counter.initialValue > 0) {
-				setCounters(newListOfCounters);
-			}
-		});
-
-	}, [counters]);
-
-	const delCounter = useCallback(() => {
-		const oddCountersValueDec = counters
-			.map((counter) =>
-				counter.initialValue % 2 !== 0
-					? { id: counter.id, initialValue: counter.initialValue - 1 }
-					: counter
-			)
-			.splice(0, counters.length - 1);
-
+	const handleDeleteCounter = () => {
 		if (counters.length > 0) {
-			setCounters(oddCountersValueDec);
+			dispatch(DELETE_COUNTER());
 		}
-	}, [counters]);
+	};
 
-	const reset = useCallback(() => {
-
+	const reset = () => {
 		if (counters.length > 0) {
-			setCounters([]);
+			dispatch(RESET_COUNTERS());
 		}
-		
-	}, [counters]);
-
-	const sum = counters.reduce((acc, counter) => acc + counter.initialValue, 0);
+	};
 
 	return (
 		<>
-			<MemorizedCountersPageView
-				addCounter={addCounter}
-				delCounter={delCounter}
+			<CountersPageLayout
+				handleCreateCounter={handleCreateCounter}
+				handleDeleteCounter={handleDeleteCounter}
 				reset={reset}
-				counterNum={counters.length}
 				sum={sum}
+				counters={counters}
+				handleDecrement={handleDecrement}
+				handleIncrement={handleIncrement}
 			/>
-			{counters.map(({ id, initialValue }) => (
-				<MemorizedCounterView
-					key={id}
-					id={id}
-					counter={initialValue}
-					handleDecrement={handleDecrement}
-					handleIncrement={handleIncrement}
-				/>
-			))}
 		</>
 	);
 };
